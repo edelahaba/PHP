@@ -28,3 +28,5 @@ if (isset($_REQUEST['enviar'])) {
     </form>
     </html>
 <?php } ?>
+<br>
+<a href="../index.php">Volver al inicio</a>

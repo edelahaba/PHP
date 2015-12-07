@@ -20,3 +20,5 @@ if (isset($_SESSION['clientes'])) {
     header("refresh:2;url=../index.php");
 }
 ?>
+<br>
+<a href="../index.php">Volver al inicio</a>

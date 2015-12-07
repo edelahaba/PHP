@@ -8,18 +8,21 @@
  */
 abstract class cuenta {
 
-    private static $numCuenta = 0;
+    private $numCuenta;
     private $saldo;
     private $interes = 1;
     private $balanceMin = 300;
 
     /**
      * cuenta constructor.
+     * @param $saldo
      */
-    public function __construct()
+    public function __construct($saldo)
     {
-        generarNumCuenta();
+        $this->saldo = $saldo;
+        $this->generarNumCuenta();
     }
+
 
     /**
      * @return int
@@ -71,7 +74,7 @@ abstract class cuenta {
     }
 
     public function generarNumCuenta(){
-        $this->setNumCuenta($this->getNumCuenta()+1);
+        $this->numCuenta = sha1(date("njYHis"));
     }
 
     /**

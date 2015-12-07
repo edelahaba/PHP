@@ -55,7 +55,7 @@ class Cliente
         $this->numTarjeta = $numTarjeta;
     }
 
-    public function genNumTarjeta($numTarjeta)
+    public function genNumTarjeta()
     {
         $this->numTarjeta = sha1(date("njYHis"));
     }
@@ -74,6 +74,10 @@ class Cliente
     public function setCuentas($cuentas)
     {
         $this->cuentas = $cuentas;
+    }
+
+    public function addAccount($c){
+        array_unshift($this->cuentas,$c);
     }
 
 }
