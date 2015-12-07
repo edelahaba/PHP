@@ -6,12 +6,12 @@ if(!isset($_SESSION['clientes'])){
 }
 ?>
 <html>
-<a href="crearClientes">Crear clientes</a>
+<a href="gestion/crearClientes.php">Crear clientes</a>
 <br>
-<a href="visualizarClientes">Visualizar clientes</a>
+<a href="gestion/visualizarClientes.php">Visualizar clientes</a>
 <br>
-<a href="crearCuentas">Crear cuentas</a>
+<a href="gestion/crearCuentas.php">Crear cuentas</a>
 <br>
-<a href="visualizarCuentas">Crear cuentas</a>
+<a href="gestion/visualizarCuentas.php">Visualizar cuentas</a>
 </html>
 

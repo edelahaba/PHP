@@ -9,18 +9,19 @@
 class Cliente
 {
     private $nombre;
-    private $numTarjeta;
+    private $numTarjeta = 0;
+    private $cuentas = Array();
 
     /**
      * Cliente constructor.
      * @param $nombre
-     * @param $numTarjeta
      */
-    public function __construct($nombre, $numTarjeta)
+    public function __construct($nombre)
     {
         $this->nombre = $nombre;
-        $this->numTarjeta = $numTarjeta;
+        $this -> genNumTarjeta();
     }
+
 
     /**
      * @return mixed
@@ -39,7 +40,7 @@ class Cliente
     }
 
     /**
-     * @return mixed
+     * @return int
      */
     public function getNumTarjeta()
     {
@@ -47,11 +48,16 @@ class Cliente
     }
 
     /**
-     * @param mixed $numTarjeta
+     * @param int $numTarjeta
      */
     public function setNumTarjeta($numTarjeta)
     {
         $this->numTarjeta = $numTarjeta;
+    }
+
+    public function genNumTarjeta($numTarjeta)
+    {
+        $this->numTarjeta = sha1(date("njYHis"));
     }
 
     /**
@@ -69,7 +75,5 @@ class Cliente
     {
         $this->cuentas = $cuentas;
     }
-    private $cuentas = Array();
-
 
 }

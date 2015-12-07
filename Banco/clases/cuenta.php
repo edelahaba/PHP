@@ -8,10 +8,18 @@
  */
 abstract class cuenta {
 
-    private $numCuenta;
+    private static $numCuenta = 0;
     private $saldo;
     private $interes = 1;
     private $balanceMin = 300;
+
+    /**
+     * cuenta constructor.
+     */
+    public function __construct()
+    {
+        generarNumCuenta();
+    }
 
     /**
      * @return int
@@ -60,6 +68,10 @@ abstract class cuenta {
     public function setSaldo($saldo)
     {
         $this->saldo = $saldo;
+    }
+
+    public function generarNumCuenta(){
+        $this->setNumCuenta($this->getNumCuenta()+1);
     }
 
     /**
